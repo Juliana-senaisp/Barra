@@ -1,0 +1,41 @@
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    transition: color 0.4s;
+    position: relative;
+    
+}
+
+nav li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(28, 55, 55);
+
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
